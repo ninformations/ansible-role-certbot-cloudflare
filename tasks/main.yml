@@ -19,7 +19,7 @@
   changed_when: "cf_check is failed"
 
 - name: Install certbot-dns-cloudflare
-  shell: "cd {{certbot_dir}}/certbot-dns-cloudflare && python setup.py install"
+  shell: "cd {{certbot_dir}}/certbot-dns-cloudflare && python3 setup.py install"
   when: cf_check is failed
 
 - name: Create certbot folder - sudouser
